@@ -10,7 +10,7 @@ interface MoviePosterProps {
 
 function MoviePoster({ movie }: MoviePosterProps) {
 
-    const releaseDate = movie?.releaseDate ? moment(new Date(movie?.releaseDate)).format('MMM DD, yyyy') : undefined;
+    const releaseDate = movie?.releaseDate ? moment(movie?.releaseDate).format('MMM DD, yyyy') : undefined;
 
     return (
         <div className="card">

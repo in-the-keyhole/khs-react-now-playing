@@ -8,7 +8,6 @@ import './NowPlaying.css';
 function NowPlaying() {
     const [movies, setMovies] = useState<Movie[]>([]);
     const [error, setError] = useState<string | undefined>();
-    console.log("this is a test");
     const { loading } = useQuery(NOW_PLAYING, {
         onCompleted: (data) => {
             setMovies(data.nowPlaying);

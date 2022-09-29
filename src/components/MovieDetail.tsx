@@ -35,7 +35,7 @@ function MovieDetail() {
     if (loading) return <p>Loading...</p>;
     if (error) return <p>{error}</p>;
 
-    const releaseDate = movie?.releaseDate ? moment(new Date(movie?.releaseDate)).format('MMM DD, yyyy') : undefined;
+    const releaseDate = movie?.releaseDate ? moment(movie?.releaseDate).format('MMM DD, yyyy') : undefined;
     const productionCountries = movie?.productionCountries.map(country => country).join(', ');
     const genres = movie?.genres.map(country => country).join(', ');
     const runtimeDuration = movie?.runtime ? moment.duration(movie?.runtime, 'minutes') : undefined;
